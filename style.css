@@ -1,0 +1,152 @@
+:root {
+    --raleway: "Raleway", sans-serif;
+    --oswald: "Oswald", sans-serif;
+    --lightblue: #C5EFCB;
+    --mainblue: #07004D;
+    --accentblue: #1E96FC;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--raleway);
+}
+
+h1, h2, h3 {
+    font-family: var(--oswald);
+}
+
+header {
+    background-image: url(./images/blue_gradient.jpg);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+header h2 {
+    font-size: 3rem;
+    margin-left: 14%;
+    color: var(--accentblue);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    color: var(--mainblue);
+}
+
+header p {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-left: 5%;
+}
+
+main {
+    background-image: url(./images/slate_blue.jpg);
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: var(--lightblue);
+}
+
+.about .description {
+    order: 1;
+}
+
+.about .description h2 {
+    font-size: 1.8rem;
+    color: var(--mainblue);
+}
+
+.about .description p {
+    width: 400px;
+    letter-spacing: 2px;
+}
+
+.about img {
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.skills {
+    padding: 20px;
+    width: 100vw;
+}
+
+.sklls h2 {
+    font-size: 1.8rem;
+    margin: 20px;
+}
+
+ul li {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.skills_child h3 {
+    font-size: 1.3rem;
+}
+
+.skills_image img, .skills_video video {
+    width: 305px;
+}
+
+footer {
+    background-image: url('./images/white_slate.jpg');
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+footer p {
+    text-align: center;
+}
+
+@media(min-width: 600px) {
+    .skills ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .skills_image img {
+        height: 200px;
+    }
+
+    .skills_video video {
+        margin: -13px 0 13px 0;
+        height: 200px;
+    }
+
+    .about {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .about .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: -50px;
+    }
+
+    .about .description p {
+        margin-left: 15%;
+    }
+}
